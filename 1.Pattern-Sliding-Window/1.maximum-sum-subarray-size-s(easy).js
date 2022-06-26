@@ -16,9 +16,22 @@ Explanation: Subarray with maximum sum is [3, 4].
 */
 
 function getMaxSumOfSubarray(arr, k) {
-  
+  let windowStart = 0;
+  let maxSum = 0;
+  let subarraySum = 0;
+  for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+    subarraySum += arr[windowEnd];
+    if (windowEnd - windowStart === k - 1) {
+      maxSum = Math.max(maxSum, subarraySum);
+      subarraySum -= arr[windowStart];
+      windowStart++;
+    }
+  }
+  return maxSum;
 }
 
+console.log(getMaxSumOfSubarray([2, 1, 5, 1, 3, 2], 3));
+console.log(getMaxSumOfSubarray([2, 3, 4, 1, 5], 2));
 
 /*
 Time Complexity: O(N).
