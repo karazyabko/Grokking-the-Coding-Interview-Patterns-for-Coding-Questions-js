@@ -24,7 +24,6 @@ Explanation: Smallest subarrays with a sum greater than or equal to '8' are [3, 
 function getMinLenOfSubarray(arr, sum) {
   let minLen = Number.MAX_SAFE_INTEGER;
   let windowStart = 0;
-  let windowEnd = 0;
   let subarraySum = 0;
   for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
     subarraySum += arr[windowEnd];
@@ -34,13 +33,12 @@ function getMinLenOfSubarray(arr, sum) {
       windowStart++;
     }
   }
-  return minLen;
+  return minLen === Number.MAX_SAFE_INTEGER ? 0 : minLen;
 }
 
 console.log(getMinLenOfSubarray([2, 1, 5, 2, 3, 2], 7));
 console.log(getMinLenOfSubarray([2, 1, 5, 2, 8], 7));
 console.log(getMinLenOfSubarray([3, 4, 1, 1, 6], 8));
-
 
 /*
 Time Complexity: O(N)
