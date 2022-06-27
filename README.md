@@ -6,3 +6,4 @@
 2. Smallest subarray with a given sum (easy)
 3. Longest substring with K distinct characters (medium)
 4. Fruits into baskets (medium)
+5. No-repeat Substring (hard)
