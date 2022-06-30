@@ -9,4 +9,4 @@
 5. No-repeat Substring (hard)
 6. Longest substring with same letters after replacement (hard)
 7. Longest subarray with ones after replacement (hard)
-8. Permutation in a string (hard)
+8. Problem Challenge 1 - Permutation in a String (hard)
